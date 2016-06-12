@@ -1,5 +1,7 @@
 ﻿namespace DefiningClassesPart1
 {
+    using System;
+
     class Call
     {
         // field
@@ -8,6 +10,14 @@
         private string phoneNumber;
         private int duration;
 
+
+        public Call(string date, string time, string phoneNumber, int duration)
+        {
+            this.Date = date;
+            this.Time = time;
+            this.PhoneNumber = phoneNumber;
+            this.Duration = duration;
+        }
 
         // properties
 
@@ -63,12 +73,5 @@
             }
 
         }
-
-
-
-
-
-
-
     }
 }

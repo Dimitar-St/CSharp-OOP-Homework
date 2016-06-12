@@ -29,10 +29,16 @@
             tst.gsmTest.Add(secondTest);
             tst.gsmTest.Add(thirdTest);
 
-            tst.gsmTest[0].SeeAllInformation(); // work
-            tst.gsmTest[1].SeeAllInformation(); // work
-            tst.gsmTest[2].SeeAllInformation(); // work
-            Console.WriteLine(tst.gsmTest[0].IPhone4S = "Apple");
+            tst.gsmTest[0].SeeAllGSMInformation(); // work
+            tst.gsmTest[1].SeeAllGSMInformation(); // work
+            tst.gsmTest[2].SeeAllGSMInformation(); // work
+                                                // Console.WriteLine(tst.gsmTest[0].IPhone4S = "Apple");
+
+            // Test call history 
+
+            GSMCallHistoryTest testCalls = new GSMCallHistoryTest("One", "HTC");
+
+            testCalls.TestFunctionality();
 
         }
     }
