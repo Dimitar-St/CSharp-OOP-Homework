@@ -1,3 +1,3 @@
-# DefiningClasses---C-OOP
+# CSharp-OOP
 
-just wrote somthing
+This is the homeworks from Telerik Academy C# OOP course
