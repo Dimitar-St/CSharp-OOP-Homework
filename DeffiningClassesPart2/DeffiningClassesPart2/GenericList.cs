@@ -1,8 +1,9 @@
 ﻿namespace DeffiningClassesPart2
 {
+    using System;
     using System.Collections.Generic;
 
-    class GenericList<T> 
+    class GenericList<T> where T : IComparable 
     {
         // fields
 
@@ -39,7 +40,7 @@
 
         public void RemoveEl (int index)
         {
-            //this.Elements
+            this.Elements.Remove(this.Elements[index]);
         }
 
         public void InsertEl (int index, T element)
@@ -52,19 +53,34 @@
             this.Elements.Clear();
         }
 
-        public T Min ()
+        public T Min () 
         {
             T min = this.Elements[0];
             
-            for (int i = 0; i < this.Elements.Count - 1; i++)
+            foreach (T element in this.Elements)
             {
-                if (min > this.Elements[i + 1])
+                if (element.CompareTo(min) < 0)
                 {
-
+                    min = element;
                 }
             }
 
             return min;
+        }
+
+        public T Max ()
+        {
+            T max = this.Elements[0];
+
+            foreach (T element in this.Elements)
+            {
+                if (element.CompareTo(max) > 0)
+                {
+                    max = element;
+                }
+            }
+            
+            return max;
         }
     }
 }
