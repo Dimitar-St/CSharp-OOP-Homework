@@ -10,8 +10,8 @@
     {
         static void Main()
         {
-            // I AM SORRY FOR THIS BAD NAMES OF MY VARIABLES
-            
+            // Предварително се извинявам за лошите имена на променливите и че съм напписал така LINQ queries-тата просто гледах по-стара лекция 
+            // Това домашно не е пълно. Само до 13 задача.
             /*
             Problem 1. StringBuilder.Substring
 
@@ -192,6 +192,84 @@
             Extract all students that have email in abv.bg.
             Use string methods and LINQ.
             */
+
+            var firstStEmail = new Student("Mitko", "gmail.com");
+            var secondStEmail = new Student("Pesho", "abv.bg");
+            var thirdStEmail = new Student("Petka", "abv.bg");
+            var fourthStEmail = new Student("Getka", "mail.bg");
+
+            var extractEmailStudent = new List<Student>();
+
+            extractEmailStudent.Add(firstStEmail);
+            extractEmailStudent.Add(secondStEmail);
+            extractEmailStudent.Add(thirdStEmail);
+            extractEmailStudent.Add(fourthStEmail);
+
+
+            var stEmailABV =
+                            from stEmail in extractEmailStudent
+                            where stEmail.Email == "abv.bg"
+                            select stEmail;
+
+            /* 
+            Problem 12. Extract students by phone
+
+            Extract all students with phones in Sofia.
+            Use LINQ.
+            */
+
+            //var firstSt = new Student("Banio", "Avanov", "02-413-4130");
+            //var secondSt = new Student("Pesho", "Avanov", "07-409-3313");
+            //var thirdSt = new Student("Abio", "Konev", "05-352-6526");
+
+            //var studentsArr = new List<Student>();
+
+            //studentsArr.Add(firstSt);
+            //studentsArr.Add(secondSt);
+            //studentsArr.Add(thirdSt);
+
+            //var extractByPhone = studentsArr.Where(s => s.Tel.IndexOf("02") == 0)
+            //                               .ToList();
+
+            //Console.WriteLine("Students with phone in Sofia");
+
+            //foreach (var std in extractByPhone)
+            //{
+            //    Console.WriteLine(std.FirstName + " " + std.LastName);
+            //}
+
+            /* 
+            Problem 13. Extract students by marks
+
+            Select all students that have at least one mark Excellent (6) into a new anonymous class that has properties – FullName and Marks.
+            Use LINQ.
+            */
+
+            var firstStMark = new Student("5", "Banio", "Avanov");
+            var secondStMark = new Student("6", "Pesho", "Avanov");
+            var thirdStMark = new Student("3", "Abio", "Konev");
+
+            var studentsArrMarks = new List<Student>();
+
+            studentsArrMarks.Add(firstStMark);
+            studentsArrMarks.Add(secondStMark);
+            studentsArrMarks.Add(thirdStMark);
+
+            var extractByExcellentMark = studentsArrMarks.Where(s => s.Marks.Contains("6"))
+                                                 .Select(x => new
+                                                 {
+                                                     FullName = x.FirstName + " " + x.LastName,
+                                                     Marks = x.Marks
+                                                 });
+
+            Console.WriteLine("Students with at least one excellent mark");
+
+            foreach (var std in extractByExcellentMark)
+            {
+                Console.WriteLine(std.FullName);
+            }
+
+            Console.WriteLine();
 
         }
     }

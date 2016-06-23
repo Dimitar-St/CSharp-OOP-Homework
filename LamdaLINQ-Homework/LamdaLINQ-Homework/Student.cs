@@ -12,7 +12,7 @@
         public string LastName { get; }
         public int Age { get; }
         public int FN { get; set; }
-        public int Tel { get; set; }
+        public string Tel { get; set; }
         public string Email { get; set; }
         public string Marks { get; set; }
         public int GroupNumber { get; set; }
@@ -25,21 +25,38 @@
             this.Age = age;
         }
 
-        public Student (string fname, string lname, int fn, int tel, string email, string marks)
+        //public Student(string fname, string lname, string tel)
+        //{
+        //    this.FirstName = fname;
+        //    this.LastName = lname;
+        //    this.Tel = tel;
+        //}
+
+        // for task 11
+        public Student (string firstName, string email)
         {
-            this.FirstName = fname;
-            this.LastName = lname;
-            this.FN = fn;
-            this.Tel = tel;
+            this.FirstName = firstName;
             this.Email = email;
-            this.Marks = marks;
         }
 
+        // for task 9 and 10
         public Student(string firstName, int group)
         {
             this.FirstName = firstName;
             this.GroupNumber = group;
         }
+
+        //for task 13
+        public Student (string marks, string firstName, string lastName)
+        {
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Marks = marks;
+        }
+         
+
+  
+
 
     }
 }
