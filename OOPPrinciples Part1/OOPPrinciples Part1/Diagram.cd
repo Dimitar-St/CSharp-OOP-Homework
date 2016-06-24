@@ -7,11 +7,11 @@
       <FileName>Discipline.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="OOPPrinciples_Part1.Main" Collapsed="true">
+  <Class Name="OOPPrinciples_Part1.StartUp" Collapsed="true">
     <Position X="0.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>Main.cs</FileName>
+      <FileName>StartUp.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="OOPPrinciples_Part1.Teacher" Collapsed="true">
