@@ -43,14 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
+    <Compile Include="Bank\Account.cs" />
     <Compile Include="Bank\Bank.cs" />
     <Compile Include="Bank\Deposit.cs" />
     <Compile Include="Bank\Loan.cs" />
     <Compile Include="Bank\Mortgage.cs" />
-    <Compile Include="CustomerType.cs" />
-    <Compile Include="IAccount.cs" />
-    <Compile Include="StartUp.cs" />
+    <Compile Include="Bank\CustomerType.cs" />
+    <Compile Include="Bank\IAccount.cs" />
+    <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
